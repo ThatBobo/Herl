@@ -67,3 +67,8 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Local secrets and editor state
+.env
+.vscode/
+out/
