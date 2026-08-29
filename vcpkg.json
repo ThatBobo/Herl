@@ -1,6 +1,8 @@
 {
   "name": "herl",
-  "version-string": "0.1.0",
-  "dependencies": ["dpp"]
+  "version": "0.1.0",
+  "description": "Discord multiplayer roleplay game in C++",
+  "dependencies": [
+    "dpp"
+  ]
 }
-

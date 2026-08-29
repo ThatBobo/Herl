@@ -7,12 +7,19 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(dpp CONFIG REQUIRED)
 
-add_executable(herl src/main.cpp)
+# Include directories
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# Main executable
+add_executable(herl 
+    src/main.cpp
+)
+
 target_link_libraries(herl PRIVATE dpp::dpp)
 
+# Compiler options
 if(MSVC)
   target_compile_options(herl PRIVATE /W4 /permissive-)
 else()
   target_compile_options(herl PRIVATE -Wall -Wextra -Wpedantic)
 endif()
-
